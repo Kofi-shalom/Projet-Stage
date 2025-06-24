@@ -1,0 +1,246 @@
+
+@import url('./reset.css');
+
+
+:root {
+    --primary-color: #2c8a4a;
+    --secondary-color: #2c824f;
+    --accent-color: #f5a623;
+    --light-color: #f8f8f8;
+    --dark-color: #333;
+    --text-color: #212020;
+    --white: #fff;
+}
+
+body {
+    font-family:  sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+
+    background-image: url('../asset/backgroud.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .picture{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+    .picture img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+    
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    
+   
+    transition: all 0.4s ease;
+}
+
+
+header h1 {
+    width: 140px;
+    transition: transform 0.3s;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+.header-scrolled {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 1.2rem 5%;
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+    
+    nav a {
+        font-size: 1rem;
+    }
+}
+
+
+main {
+    margin-top: 80px; 
+    min-height: 70vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero {
+    width: 100%;
+    padding: 4rem 5%;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+
+.hero h2 {
+    font-size: 2.8rem;
+    color: #1f5e38; 
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hero h3 {
+    font-size: 1.8rem;
+    color: #2c8a4a; 
+    margin-bottom: 2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 5%;
+    }
+    
+    .hero-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero h3 {
+        font-size: 1.4rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: var(--white);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    main h3 {
+        font-size: 1.2rem;
+    }
+}
