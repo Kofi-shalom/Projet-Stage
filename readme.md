@@ -49,5 +49,5 @@ Pour toute question ou suggestion, contactez-nous à :
 📧 [contact@aipas.org](mailto:contact@aipas.org)
 
 ---
-
+Site:  "https://kofi-shalom.github.io/Projet-Stage/"
 © 2025 AIPAS – Association Internationale pour la Paix et la Solidarité
