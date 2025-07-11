@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta name="description" content="Création d'un site web">
+     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <title> AIPAS - Association Internationale pour la Paix et la Solidarité </title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -28,9 +32,40 @@
         </nav>
     </header>
 
-    <main>
+    
+<main>
 
-    </main>
+    
+    <div class="form-primary" role="region" aria-labelledby="form">
+        <fieldset>
+            <legend>Contactez-nous</legend>
+      
+        
+        <form class="contact-form" action="sendmail.php" method="post" autocomplete="off">
+            <div>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+        <div class="contact-infos">
+            <h3>Nos coordonnées</h3>
+            <p>Email : <a href="mailto:contact@aipas.org">contact@aipas.org</a></p>
+            <p>Téléphone : +33 1 23 45 67 89</p>
+            <p>Adresse : 10 rue de la Solidarité, 75000 Paris, France</p>
+            </fieldset>
+        </div>
+   
+</main>
+
 
     
     <footer>
